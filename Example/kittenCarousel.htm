@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Carousel Example</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="randKitten.js"></script>
+        <script src="../utility.js"></script>
+        <script src="../carousel.js"></script>
+
+        <script type="text/javascript">
+        $(window).load(function() {
+            settings = {
+                linkCallback: function(target) { $(document).location.href = target; },
+            };
+            $("#placeKitten").carousel("start", settings);
+        });
+        </script>
+    </head>
+    <body>
+        <div id="placeKitten" ondragstart="return false;">
+            <a href="http://google.com/"><img src="http://placekitten.com/g/200/400"></a>
+        </div>
+    </body>
+</html>
