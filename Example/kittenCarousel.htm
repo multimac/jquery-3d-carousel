@@ -8,13 +8,12 @@
 
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="randKitten.js"></script>
-        <script src="../utility.js"></script>
         <script src="../carousel.js"></script>
 
         <script type="text/javascript">
         $(window).load(function() {
             settings = {
-                linkCallback: function(target) { $(document).location.href = target; },
+                linkCallback: function(target) { return true; },
             };
             $("#placeKitten").carousel("start", settings);
         });
